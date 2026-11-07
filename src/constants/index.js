@@ -77,11 +77,11 @@ const dockApps = [
 const blogPosts = [
     {
         id: 1,
-        date: "Sep 2, 2025",
+        date: "Nov 7, 2026",
         title:
-            "TypeScript Explained: What It Is, Why It Matters, and How to Master It",
+            "Zustand: State Management Without the Redux Boilerplate",
         image: "/images/blog1.png",
-        link: "https://jsmastery.com/blog/typescript-explained-what-it-is-why-it-matters-and-how-to-master-it",
+        link: "https://dev.to/ghassen_khaldi_ac8aef8ea2/zustand-state-management-without-the-redux-boilerplate-4bda",
     },
     {
         id: 2,

@@ -17,13 +17,17 @@ const Navbar = () => {
             </div>
             <div>
                 <ul>
-                    {
-                        navIcons.map((icon) =>(
-                            <li key={icon.id}>
-                                <img src={icon.img} className={"icon-hover"} alt={"icon"} />
-                            </li>
-                        ))
-                    }
+                    {navIcons.map((icon) => (
+                        <li key={icon.id}>
+                            <button className="bg-transparent border-0 p-0 cursor-pointer">
+                                <img
+                                    src={icon.img}
+                                    className="icon-hover"
+                                    alt="icon"
+                                />
+                            </button>
+                        </li>
+                    ))}
                 </ul>
                 <time>{dayjs().format("ddd MMM D h:mm A")}</time>
             </div>
