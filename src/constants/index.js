@@ -19,7 +19,7 @@ const navLinks = [
 const navIcons = [
     {
         id: 1,
-        img: "/icons/wifi.svg",
+        img: "/icons/wifi.svg",popover: "wifi",
     },
     {
         id: 2,
@@ -131,29 +131,29 @@ const socials = [
         id: 1,
         text: "Github",
         icon: "/icons/github.svg",
-        bg: "#f4656b",
-        link: "https://github.com/JavaScript-Mastery-Pro",
+        bg: "#181717",
+        link: "https://github.com/Sighassenk",
     },
     {
-        id: 2,
-        text: "Platform",
-        icon: "/icons/atom.svg",
-        bg: "#4bcb63",
-        link: "https://jsmastery.com/",
+        id: 1,
+        text: "Email",
+        icon: "/icons/email.svg",
+        bg: "#EA4335",
+        link: "https://mail.google.com/mail/?view=cm&fs=1&to=khaldighassen17@gmail.com",
     },
     {
         id: 3,
-        text: "Twitter/X",
-        icon: "/icons/twitter.svg",
-        bg: "#ff866b",
-        link: "https://x.com/jsmasterypro",
+        text: "CodeForces",
+        icon: "/icons/codeforces.svg",
+        bg: "#1F8ACB",
+        link: "https://codeforces.com/profile/GhassenCC",
     },
     {
         id: 4,
         text: "LinkedIn",
         icon: "/icons/linkedin.svg",
         bg: "#05b6f6",
-        link: "https://www.linkedin.com/company/javascriptmastery/posts/?feedView=all",
+        link: "https://www.linkedin.com/in/ghassen-khaldi-1bb110326/",
     },
 ];
 

@@ -7,10 +7,80 @@ body {
     width: 100dvw;
     overflow: hidden;
     height: 100dvh;
-    background-image: url("public/images/W90TMU.webp");
+    background-image: url("public/images/wallpaper.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+#wifi {
+    @apply absolute top-11 right-4 z-[9999] w-80 p-4 rounded-xl select-none text-sm text-gray-900
+    bg-white/60 backdrop-blur-2xl shadow-2xl drop-shadow-2xl border border-white/40;
+
+    hr {
+        @apply my-3 border-gray-400/30;
+    }
+
+    .row {
+        @apply flex items-center justify-between;
+
+        h3 {
+            @apply font-semibold text-base;
+        }
+    }
+
+    h4 {
+        @apply text-xs font-semibold text-gray-500 mb-2;
+    }
+
+    .switch {
+        @apply relative w-11 h-6 rounded-full bg-gray-300 transition-colors cursor-pointer;
+
+        span {
+            @apply absolute top-0.5 left-0.5 size-5 rounded-full bg-white shadow transition-transform;
+        }
+
+        &.on {
+            @apply bg-blue-500;
+
+            span {
+                @apply translate-x-5;
+            }
+        }
+    }
+
+    .network {
+        @apply flex items-center gap-3;
+
+        .badge {
+            @apply size-8 rounded-full bg-blue-500 flex-center;
+
+            img {
+                @apply size-4 invert;
+            }
+        }
+
+        p {
+            @apply flex-1;
+        }
+
+        .lock {
+            @apply size-3.5 opacity-60;
+        }
+    }
+
+    details {
+        summary {
+            @apply text-xs font-semibold text-gray-500 cursor-pointer;
+        }
+
+        li {
+            @apply px-2 py-1.5 rounded-md hover:bg-blue-500 hover:text-white cursor-pointer;
+        }
+    }
+
+    .settings {
+        @apply w-full text-left px-1 py-1 rounded-md hover:bg-blue-500 hover:text-white cursor-pointer;
+    }
 }
 
 
@@ -333,6 +403,7 @@ body {
                 }
             }
         }
+
 
         .content {
             @apply flex-1 p-8 bg-white max-w-2xl relative;
