@@ -5,7 +5,7 @@ import usePopoverStore from "#Store/popover.js";
 
 const Navbar = () => {
     const {openWindow}=useWindowStore();
-    const { toggle } = usePopoverStore();
+    const { togglePopover  } = usePopoverStore();
     return (
         <nav>
             <div>
@@ -24,9 +24,8 @@ const Navbar = () => {
                     {navIcons.map((icon) => (
                         <li key={icon.id}>
                             <button
-                                data-popover-trigger
                                 className="bg-transparent border-0 p-0 cursor-pointer"
-                                onClick={() => icon.popover && toggle(icon.popover)}
+                                onClick={() => icon.popover && togglePopover(icon.popover)}
                             >
                                 <img src={icon.img} className="icon-hover" alt="icon" />
                             </button>

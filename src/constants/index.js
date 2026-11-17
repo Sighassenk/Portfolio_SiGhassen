@@ -28,12 +28,22 @@ const navIcons = [
     {
         id: 3,
         img: "/icons/user.svg",
+        popover: "user"
+
     },
     {
         id: 4,
         img: "/icons/mode.svg",
     },
 ];
+const users = [
+    { id: 1, name: "Ghassen", avatar: "/images/avatar.jpeg", current: true },
+    { id: 2, name: "Guest", avatar: "/images/guest.png" },
+];
+const POPOVER_CONFIG = {
+    wifi: { isOpen: false },
+    user: { isOpen: false },
+};
 
 const dockApps = [
     {
@@ -135,7 +145,7 @@ const socials = [
         link: "https://github.com/Sighassenk",
     },
     {
-        id: 1,
+        id: 2,
         text: "Email",
         icon: "/icons/email.svg",
         bg: "#EA4335",
@@ -213,6 +223,7 @@ export {
     socials,
     photosLinks,
     gallery,
+    users,POPOVER_CONFIG
 };
 
 const WORK_LOCATION = {
@@ -225,52 +236,43 @@ const WORK_LOCATION = {
         // ▶ Project 1
         {
             id: 5,
-            name: "Nike Ecommerce Website Application",
+            name: "Skilled - AI Agent Skills Marketplace",
             icon: "/images/folder.png",
             kind: "folder",
-            position: "top-10 left-5", // icon position inside Finder
-            windowPosition: "top-[5vh] left-5", // optional: Finder window position
+            position: "top-10 left-5",
+            windowPosition: "top-[5vh] left-5",
             children: [
                 {
                     id: 1,
-                    name: "Nike Project.txt",
+                    name: "Skilled Project.txt",
                     icon: "/images/txt.png",
                     kind: "file",
                     fileType: "txt",
                     position: "top-5 left-10",
                     description: [
-                        "The Nike eCommerce website is a sleek and modern platform designed for shopping the latest Nike collections.",
-                        "Instead of a simple online store, it delivers an immersive experience with bold visuals, interactive product displays, and smooth navigation.",
-                        "Think of it like walking into a flagship Nike store—but right from your phone or laptop.",
-                        "It's built with Next.js and Tailwind, ensuring fast performance, responsive design, and a clean, premium look.",
+                        "Skilled is a full-stack marketplace designed for discovering and exploring skills built for AI agents.",
+                        "The platform brings together a modern marketplace experience, allowing users to browse and discover tools and capabilities that extend what AI agents can do.",
+                        "Built with TanStack Start, it leverages server-side rendering, file-based routing, server functions, and efficient data fetching for a modern full-stack architecture.",
+                        "It integrates Clerk for authentication and Firebase for backend services, alongside Tailwind CSS and Shadcn UI for a clean and responsive interface.",
                     ],
                 },
                 {
                     id: 2,
-                    name: "nike.com",
+                    name: "GitHub",
                     icon: "/images/safari.png",
                     kind: "file",
                     fileType: "url",
-                    href: "https://youtu.be/fZdTYswuZjU?si=Awjl-pIst9e09_UU",
+                    href: "https://github.com/Sighassenk/Skilled",
                     position: "top-10 right-20",
                 },
                 {
-                    id: 4,
-                    name: "nike.png",
+                    id: 3,
+                    name: "skilled.png",
                     icon: "/images/image.png",
                     kind: "file",
                     fileType: "img",
                     position: "top-52 right-80",
-                    imageUrl: "/images/project-1.png",
-                },
-                {
-                    id: 5,
-                    name: "Design.fig",
-                    icon: "/images/plain.png",
-                    kind: "file",
-                    fileType: "fig",
-                    href: "https://google.com",
-                    position: "top-60 right-20",
+                    imageUrl: "/images/skilled.png",
                 },
             ],
         },
@@ -397,7 +399,7 @@ const ABOUT_LOCATION = {
             kind: "file",
             fileType: "img",
             position: "top-10 left-5",
-            imageUrl: "/images/adrian.jpg",
+            imageUrl: "/images/ghassen.jpeg",
         },
         {
             id: 2,
@@ -406,7 +408,7 @@ const ABOUT_LOCATION = {
             kind: "file",
             fileType: "img",
             position: "top-28 right-72",
-            imageUrl: "/images/adrian-2.jpg",
+            imageUrl: "/images/casual-me.jpeg",
         },
         {
             id: 3,
@@ -415,7 +417,7 @@ const ABOUT_LOCATION = {
             kind: "file",
             fileType: "img",
             position: "top-52 left-80",
-            imageUrl: "/images/adrian-3.jpeg",
+            imageUrl: "/images/conference-me.jpeg",
         },
         {
             id: 4,
@@ -425,12 +427,12 @@ const ABOUT_LOCATION = {
             fileType: "txt",
             position: "top-60 left-5",
             subtitle: "Meet the Developer Behind the Code",
-            image: "/images/adrian.jpg",
+            image: "/images/me.jpeg",
             description: [
-                "Hey! I’m Adrian 👋, a web developer who enjoys building sleek, interactive websites that actually work well.",
-                "I specialize in JavaScript, React, and Next.js—and I love making things feel smooth, fast, and just a little bit delightful.",
-                "I’m big on clean UI, good UX, and writing code that doesn’t need a search party to debug.",
-                "Outside of dev work, you'll find me tweaking layouts at 2AM, sipping overpriced coffee, or impulse-buying gadgets I absolutely convinced myself I needed 😅",
+                "Hey! I'm Ghassen, a Computer Science student and software engineer who enjoys turning ideas into functional, well-designed applications.\n",
+                "I work with technologies like React, Angular, Node.js, Python, and C++, and I'm always exploring new things, from AI and machine learning to backend systems and cybersecurity.",
+                "I enjoy solving problems, building things from scratch, and writing clean code that actually makes sense (and hopefully doesn't break at 2 AM).\n",
+                "Outside of coding, you'll probably find me competing in programming challenges, experimenting with new technologies, or convincing myself that starting just one more project is a good idea.",
             ],
         },
     ],
@@ -469,7 +471,7 @@ const TRASH_LOCATION = {
             kind: "file",
             fileType: "img",
             position: "top-10 left-10",
-            imageUrl: "/images/trash-1.png",
+            imageUrl: "/images/trash-1.jpeg",
         },
         {
             id: 2,
@@ -478,7 +480,7 @@ const TRASH_LOCATION = {
             kind: "file",
             fileType: "img",
             position: "top-40 left-80",
-            imageUrl: "/images/trash-2.png",
+            imageUrl: "/images/trash-2.jpeg",
         },
     ],
 };
