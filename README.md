@@ -302,11 +302,7 @@ const navIcons = [
 6. **Blog posts**: edit `blogPosts` in `src/constants/index.js`
 7. **Fonts**: Georama and Roboto Mono are loaded in `index.css` and registered in `@theme`
 
-## Acknowledgements
 
-- Design inspiration: [macOS](https://www.apple.com/macos/) by Apple
-- Icons: [Lucide](https://lucide.dev)
-- Animations: [GSAP](https://gsap.com)
 
 ---
 
